@@ -1,0 +1,43 @@
+select top 5 * from employees;
+select distinct category from products;
+select * from products where price > 100;
+select * from customers where firstname like 'a%';
+select * from products order by price asc;
+select * from employees where salary >= 60000 and department = 'HR';
+select empid, fullname, isnull(email, 'noemail@example.com') as email, salary from employees;
+select * from products where price between 50 and 100;
+select distinct category, productname from products;
+select distinct category, productname from products order by productname desc;
+select top 10 * from products order by price desc;
+select empid, coalesce(firstname, lastname) as name from employees;
+select distinct category, price from products;
+select * from employees where (age between 30 and 40) or department = 'Marketing';
+select * from employees order by salary desc offset 10 rows fetch next 10 rows only;
+select * from products where price <= 1000 and stock > 50 order by stock asc;
+select * from products where productname like '%e%';
+select * from employees where department in ('HR', 'IT', 'Finance');
+select * from customers order by city asc, postalcode desc;
+select top(5) * from products order by salesamount desc;
+select firstname + ' ' + lastname as fullname from employees;
+select distinct category, productname, price from products where price > 50;
+select * from products where price < (select avg(price) * 0.1 from products);
+select * from employees where age < 30 and department in ('HR', 'IT');
+select * from customers where email like '%@gmail.com';
+select * from employees where salary > all (select salary from employees where department = 'sales');
+select * from orders where latest_date between dateadd(day, -180, getdate()) and getdate();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
