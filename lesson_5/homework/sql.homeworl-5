@@ -1,0 +1,54 @@
+select productname as name from products;
+select * from customers as client;
+select productname from products union select productname from products_discounted;
+select productname from products intersect select productname from products_discounted;
+select distinct firstname, lastname, country from customers;
+select productname, price,case when price > 1000 then 'High' else 'Low' end as price_category from products;
+select productname, stockquantity, iif(stockquantity > 100, 'Yes', 'No') as in_stock from products_discounted;
+select productname from products union select productname from products_discounted;
+select productname from products except select productname from products_discounted;
+select productname, price, iif(price > 1000, 'expensive', 'affordable') as price_category from products;
+select *from employees where age < 25 or salary > 60000; update employees set salary = salary * 1.10 where departmentname = 'HR' or employeeid = 5;
+update employees set salary = salary * 1.10 where departmentname = 'HR' or employeeid = 5;
+select saleamount, case when saleamount > 500 then 'top tier' when saleamount between 200 and 500 then 'mid tier'else 'low tier'end as saletier from sales;
+select customerid from orders except select customerid from sales;
+select customerid, quantity, case when quantity = 1 then '3%' when quantity between 2 and 3 then '5%' else '7%' end as discount_percentage from orders;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
