@@ -1,0 +1,19 @@
+select distinct  least(col1, col2) as min_val, greatest(col1, col2) as max_val from inputtbl;
+select * from testmultiplezero where a <> 0 or b <> 0 or c <> 0 or d <> 0;
+create table section1 (id int, name varchar(20));insert into section1 values (1, 'Bobir'),(2, 'nodir'),(3, 'Sanjik'), (4, 'Paolat'),(5, 'hoshim'),(6, 'Barno'),(7, 'koma'),(8, 'Asli');
+select * from section1 where id = (select min(id) from section1);
+select * from section1 where id = (select max(id) from section1); id =8 'asli'
+select * rom section1 where lower(name) like 'b%';
+select *from section1 where name like '%\_%' escape '\';
+select * from productcodes where code like '%\_%' escape '\';
+
+
+
+
+
+
+
+
+
+
+
